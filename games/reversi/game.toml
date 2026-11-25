@@ -1,0 +1,29 @@
+id = "reversi"
+title = "黑白棋"
+description = "两人在 8×8 棋盘上轮流落子，夹住的对方棋子翻成自己的颜色。无处可下时自动跳过，终局子多者胜。非法落子或崩溃判负。"
+min_players = 2
+max_players = 2
+turn_timeout_ms = 1000
+max_turns = 64
+max_faults = 0
+
+[config]
+size = 8
+
+[render]
+kind = "grid"
+width = 8
+height = 8
+background = "felt"
+fps = 3
+
+[render.cells.1]
+shape = "stone"
+player = 0
+
+[render.cells.2]
+shape = "stone"
+player = 1
+
+[input]
+kind = "cell"

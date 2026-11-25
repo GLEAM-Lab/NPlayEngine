@@ -1,0 +1,11 @@
+[package]
+name = "npe-runner"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+npe-core = { path = "../npe-core" }
+serde.workspace = true
+serde_json.workspace = true
+process-wrap = { version = "8.2", default-features = false, features = ["std", "job-object", "process-group", "creation-flags", "tracing"] }

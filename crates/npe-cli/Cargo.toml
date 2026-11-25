@@ -1,0 +1,18 @@
+[package]
+name = "npe-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "npe"
+path = "src/main.rs"
+
+[dependencies]
+npe-core = { path = "../npe-core" }
+npe-runner = { path = "../npe-runner" }
+serde.workspace = true
+serde_json.workspace = true
+include_dir = "0.7"
+tiny_http = { version = "0.12", default-features = false }
+getrandom = "0.3"

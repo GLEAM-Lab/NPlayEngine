@@ -1,0 +1,13 @@
+[package]
+name = "npe-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+toml = { version = "0.9", default-features = false, features = ["parse", "serde", "std"] }
+libm = "0.2"
+# no_time: the rules must not see a clock. Hash seeds are fixed in .cargo/config.toml.
+rhai = { version = "1.27", default-features = false, features = ["std", "serde", "no_time", "no_module", "no_custom_syntax"] }

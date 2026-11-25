@@ -1,0 +1,44 @@
+id = "snake"
+title = "贪吃蛇"
+description = "1 到 6 条蛇同时移动。吃果子变长得分，撞墙、撞到任何蛇身就出局。活得久、吃得多的排名靠前。一个人也能玩，比谁的分高。"
+min_players = 1
+max_players = 6
+turn_timeout_ms = 300
+max_turns = 400
+max_faults = 5
+
+[config]
+width = 24
+height = 18
+food = 6
+start_length = 3
+
+[render]
+kind = "grid"
+width = 24
+height = 18
+background = "plain"
+fps = 10
+
+[render.sprites.food]
+shape = "dot"
+color = "#e0563f"
+size = 0.6
+
+[render.sprites.body]
+shape = "square"
+size = 0.86
+
+[render.sprites.head]
+shape = "head"
+size = 1.0
+
+[input]
+kind = "keys"
+tick_ms = 220
+
+[input.keys]
+ArrowUp = { dir = 0 }
+ArrowRight = { dir = 1 }
+ArrowDown = { dir = 2 }
+ArrowLeft = { dir = 3 }

@@ -1,0 +1,66 @@
+id = "maze"
+title = "迷宫拾光"
+description = "1 到 4 个探索者在随机迷宫里同时行动，收集光点得分，躲开巡逻的哨兵。拿到护盾后可以反过来击退哨兵。看不到太远的对手和哨兵。"
+min_players = 1
+max_players = 4
+turn_timeout_ms = 300
+max_turns = 300
+max_faults = 5
+
+[config]
+width = 21
+height = 15
+sentries = 3
+shields = 4
+shield_turns = 20
+sight = 7
+lives = 2
+
+[render]
+kind = "grid"
+width = 21
+height = 15
+background = "plain"
+fps = 8
+
+[render.cells.1]
+shape = "wall"
+
+[render.cells.2]
+shape = "dot"
+size = 0.26
+color = "#2f9e8f"
+
+[render.cells.3]
+shape = "ring"
+size = 0.62
+color = "#c9861c"
+
+[render.sprites.runner]
+shape = "hex"
+size = 0.84
+
+[render.sprites.shielded]
+shape = "hex_shield"
+size = 0.84
+
+[render.sprites.sentry]
+shape = "diamond"
+size = 0.8
+color = "#4b5563"
+
+[render.sprites.sentry_scared]
+shape = "diamond"
+size = 0.62
+color = "#9aa8bd"
+
+[input]
+kind = "keys"
+tick_ms = 260
+
+[input.keys]
+ArrowUp = { dir = 0 }
+ArrowRight = { dir = 1 }
+ArrowDown = { dir = 2 }
+ArrowLeft = { dir = 3 }
+Space = { dir = 4 }
